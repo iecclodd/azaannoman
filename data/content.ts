@@ -29,11 +29,23 @@ export const content: SiteContent = {
   role: "Builder & Engineer",
 
   today: [
-    "I'm a high-school builder and engineer from Richmond, TX. Right now I'm co-founding Polyshield, a safety layer that keeps AI agents from taking unsafe actions, and researching interpretable AI for prosthetic gesture recognition with a professor at the University of Miami.",
-    "I'm drawn to systems — machines, organizations, businesses — and I ask the same questions about all of them: why does it work this way, what's inefficient, and how could it be rebuilt better? Alongside the building, I lead officer and director roles across seven organizations. I like to work at the intersection of AI, security, and engineering.",
+    "I build what I want to see. Most of my projects start as something I wished existed, so I make it myself.",
+    "I'm into drone technology, machine learning, neuroscience, and biomedical engineering — and where they overlap. Lately that's meant building Worktree and Morro, co-founding Polyshield, and researching interpretable AI for prosthetics with a professor at the University of Miami.",
   ],
 
   projects: [
+    {
+      title: "Worktree",
+      description:
+        "A desktop workspace for AI software teams — connect your computers as nodes, run agents on any of them, and follow the work from any device. Local or synced, with your own provider keys.",
+      href: "https://tryworktree.com",
+    },
+    {
+      title: "Morro",
+      description:
+        "Personal software that shapes itself around how you actually work. It connects the apps you already use, maps the work into your own objects — leads, follow-ups, decisions — and generates an interface around them. In private beta.",
+      href: "https://morroapp.vercel.app",
+    },
     {
       title: "Polyshield",
       description:
