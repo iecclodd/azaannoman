@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: theme("colors.paper");
+  color: theme("colors.ink");
+}
+
+/* Subtle underline-on-hover for links, Emil-style */
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: #111110;
+  color: #fdfdfc;
+}
