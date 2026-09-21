@@ -37,13 +37,13 @@ export const content: SiteContent = {
     {
       title: "Worktree",
       description:
-        "A desktop workspace for AI software teams — connect your computers as nodes, run agents on any of them, and follow the work from any device. Local or synced, with your own provider keys.",
+        "A desktop workspace for AI software teams — connect your computers as nodes, run agents on any of them, and follow the work from any device. Local or synced, with your own provider keys. Co-founder.",
       href: "https://tryworktree.com",
     },
     {
       title: "Morro",
       description:
-        "Personal software that shapes itself around how you actually work. It connects the apps you already use, maps the work into your own objects — leads, follow-ups, decisions — and generates an interface around them. In private beta.",
+        "Personal software that shapes itself around how you actually work. It connects the apps you already use, maps the work into your own objects — leads, follow-ups, decisions — and generates an interface around them. In private beta. Co-founder.",
       href: "https://morroapp.vercel.app",
     },
     {
