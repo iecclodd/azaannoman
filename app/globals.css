@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -16,17 +16,12 @@ body {
   color: theme("colors.ink");
 }
 
+/* Subtle underline-on-hover for links, Emil-style */
 a {
   text-decoration: none;
 }
 
 ::selection {
-  background: #e6f285;
-  color: #222321;
-}
-
-/* Range input polish for the detector control */
-input[type="range"] {
-  height: 4px;
-  cursor: pointer;
+  background: #111110;
+  color: #fdfdfc;
 }
