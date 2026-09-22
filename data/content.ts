@@ -29,8 +29,8 @@ export const content: SiteContent = {
   role: "Builder & Engineer",
 
   today: [
-    "I build what I want to see. Most of my projects start as something I wished existed, so I make it myself.",
-    "I'm into drone technology, machine learning, neuroscience, and biomedical engineering — and where they overlap. Lately that's meant building Worktree and Morro, co-founding Polyshield, and researching interpretable AI for prosthetics with a professor at the University of Miami.",
+    "I build what I want to see. Most of what I make starts as something I wished existed, so I make it myself.",
+    "The problems worth solving usually sit in the overlap between fields — drone technology, machine learning, neuroscience, biomedical engineering — where no single discipline has the whole answer. That gap is the most interesting place to build.",
   ],
 
   projects: [
@@ -67,11 +67,6 @@ export const content: SiteContent = {
       description:
         "A pre-launch education platform building free, structured STEM learning for students.",
       href: "https://stem.mathlify.org",
-    },
-    {
-      title: "Vibe Engineering Software",
-      description:
-        "Experimental tooling that turns a plain-language prompt into a complete, on-brand UI system — components, tokens, and layouts.",
     },
   ],
 
