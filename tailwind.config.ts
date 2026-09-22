@@ -13,7 +13,6 @@ const config: Config = {
         ink: "#111110",
         muted: "#6b6b68",
         line: "#e8e8e4",
-        accent: "#8a2432",
       },
       maxWidth: {
         prose: "40rem",
