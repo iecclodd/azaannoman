@@ -36,8 +36,7 @@ function Item({ item }: { item: LinkItem }) {
 
 function Heading({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="mb-5 flex items-center gap-2 text-[0.95rem] font-semibold tracking-tight text-ink">
-      <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
+    <h2 className="mb-5 text-[0.95rem] font-semibold tracking-tight text-ink">
       {children}
     </h2>
   );
