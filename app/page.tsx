@@ -10,11 +10,9 @@ function Item({ item }: { item: LinkItem }) {
       href={item.href}
       target={isExternal(item.href) ? "_blank" : undefined}
       rel={isExternal(item.href) ? "noopener noreferrer" : undefined}
-      className="group inline-flex items-center gap-1 font-medium text-ink transition-colors hover:text-muted"
+      className="group inline-flex items-center gap-1 font-medium text-ink"
     >
-      <span className="underline decoration-line decoration-1 underline-offset-[3px] group-hover:decoration-muted">
-        {item.title}
-      </span>
+      <span className="u-anim">{item.title}</span>
       {isExternal(item.href) && (
         <span
           aria-hidden

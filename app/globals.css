@@ -9,6 +9,7 @@
 html {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,7 +17,6 @@ body {
   color: theme("colors.ink");
 }
 
-/* Subtle underline-on-hover for links, Emil-style */
 a {
   text-decoration: none;
 }
@@ -24,4 +24,55 @@ a {
 ::selection {
   background: #111110;
   color: #fdfdfc;
+}
+
+/* Link underline that sweeps in on hover */
+.u-anim {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  padding-bottom: 1.5px;
+  transition: background-size 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.group:hover .u-anim {
+  background-size: 100% 1px;
+}
+
+/* Gentle staggered entrance on load */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  main > * {
+    animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  main > *:nth-child(1) {
+    animation-delay: 0.04s;
+  }
+  main > *:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  main > *:nth-child(3) {
+    animation-delay: 0.16s;
+  }
+  main > *:nth-child(4) {
+    animation-delay: 0.22s;
+  }
+  main > *:nth-child(5) {
+    animation-delay: 0.28s;
+  }
+  main > *:nth-child(6) {
+    animation-delay: 0.34s;
+  }
+  main > *:nth-child(7) {
+    animation-delay: 0.4s;
+  }
 }
