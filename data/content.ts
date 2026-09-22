@@ -48,12 +48,6 @@ export const content: SiteContent = {
       href: "https://morroapp.vercel.app",
     },
     {
-      title: "Polyshield",
-      description:
-        "A security platform that stops AI agents from taking unauthorized or unsafe actions — real-time guardrails and policy workflows for autonomous agents. Co-founder.",
-      href: "https://polyshield.vercel.app",
-    },
-    {
       title: "Skyes Travel — AI Booking System",
       description:
         "An AI-powered booking system I built for a family travel business approaching $200K in revenue. It runs the whole reservation workflow, turning a manual process into a fast, near hands-free pipeline from first inquiry to confirmed booking.",
@@ -72,6 +66,12 @@ export const content: SiteContent = {
       title: "RECOIL-1: A Bioinspired Elastic-Recovery Water Pump",
       description:
         "A low-pressure water pump with a replaceable, leaf-shaped silicone membrane. The AutoCAD design uses a cam-driven mechanism to compress the membrane while elastic recovery helps refill the chamber. A branching, leaf-vein-inspired reinforcement pattern is compared against a plain membrane to test whether controlled stiffness improves refilling, recovery timing, and consistency of water delivery.",
+    },
+    {
+      title: "Polyshield",
+      description:
+        "A security platform that stops AI agents from taking unauthorized or unsafe actions — real-time guardrails and policy workflows for autonomous agents. Co-founder.",
+      href: "https://polyshield.vercel.app",
     },
     {
       title: "CalcQuest",
