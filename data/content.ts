@@ -29,8 +29,8 @@ export const content: SiteContent = {
   role: "Builder & Engineer",
 
   today: [
-    "I build what I want to see. Most of what I make starts as something I wished existed, so I make it myself.",
-    "The problems worth solving usually sit in the overlap between fields — drone technology, machine learning, neuroscience, biomedical engineering — where no single discipline has the whole answer. That gap is the most interesting place to build.",
+    "I'm a high schooler at Seven Lakes High School. When I'm not in class, I'm usually building something.",
+    "My interests sit at the intersection of drone technology, machine learning, neuroscience, and biomedical engineering — autonomous systems, AI, and the engineering that ties them together.",
   ],
 
   projects: [
