@@ -75,7 +75,8 @@ export default function Home() {
       </section>
 
       <Section title="Projects" items={content.projects} />
-      <Section title="Building" items={content.building} />
+      <Section title="Leadership" items={content.leadership} />
+      <Section title="Publications" items={content.publications} />
       <Section title="More" items={content.links} />
 
       {/* Footer */}

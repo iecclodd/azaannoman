@@ -20,7 +20,8 @@ export interface SiteContent {
   role: string;
   today: string[];
   projects: LinkItem[];
-  building: LinkItem[];
+  leadership: LinkItem[];
+  publications: LinkItem[];
   links: LinkItem[];
 }
 
@@ -43,7 +44,7 @@ export const content: SiteContent = {
     {
       title: "Morro",
       description:
-        "Personal software that shapes itself around how you actually work. It connects the apps you already use, maps the work into your own objects — leads, follow-ups, decisions — and generates an interface around them. In private beta. Co-founder.",
+        "Personal software that shapes itself around how you actually work. It connects the apps you already use, maps the work into your own objects — leads, follow-ups, decisions — and generates an interface around them. Co-founder.",
       href: "https://morroapp.vercel.app",
     },
     {
@@ -53,24 +54,34 @@ export const content: SiteContent = {
       href: "https://polyshield.vercel.app",
     },
     {
-      title: "Skyes Travel — AI Booking",
+      title: "Skyes Travel — AI Booking System",
       description:
-        "An AI booking engine for a travel company that automates the repetitive steps of the reservation workflow. AI automation intern.",
+        "An AI-powered booking system I built for a family travel business. It runs the whole reservation workflow, turning a manual, repetitive process into a fast, near hands-free pipeline that takes a trip from first inquiry to confirmed booking.",
     },
     {
-      title: "Autonomous Drone Navigation & Mapping",
+      title: "Fruit-Fly Connectome Autonomy",
       description:
-        "AI-driven perception retrofitted onto existing drone platforms for self-navigation and mapping. Grew out of building three high-performance FPV drones from scratch.",
+        "The fruit fly recently became the most complex animal to have its entire brain digitally reconstructed, with every neuron and connection mapped. I'm developing an autonomous system built on that connectome, turning a fully digitized biological brain into a working model for machine navigation and control.",
+    },
+    {
+      title: "RECOIL-1: A Bioinspired Elastic-Recovery Water Pump",
+      description:
+        "A low-pressure water pump with a replaceable, leaf-shaped silicone membrane. The AutoCAD design uses a cam-driven mechanism to compress the membrane while elastic recovery helps refill the chamber. A branching, leaf-vein-inspired reinforcement pattern is compared against a plain membrane to test whether controlled stiffness improves refilling, recovery timing, and consistency of water delivery.",
+    },
+    {
+      title: "CalcQuest",
+      description:
+        "A game that makes practicing AP Calculus AB/BC feel like leveling up instead of grinding problem sets. I'm a junior developer on the team, driving the design and visuals, with more of the build on the way.",
     },
     {
       title: "Mathlify STEM",
       description:
-        "A pre-launch education platform building free, structured STEM learning for students.",
+        "A student-led nonprofit making hands-on STEM affordable for under-resourced schools. It ships beginner electronics kits with breadboards, LEDs, resistors, and printed activity guides, built on the belief that hands-on STEM access shouldn't depend on budget.",
       href: "https://stem.mathlify.org",
     },
   ],
 
-  building: [
+  leadership: [
     {
       title: "SLHS Student Council — Officer",
       description:
@@ -92,13 +103,28 @@ export const content: SiteContent = {
     {
       title: "University of Miami — AI Research Collaborator",
       description:
-        "Building the analysis model and co-authoring a research abstract on interpretable AI for prosthetics with a biomedical engineering professor.",
+        "Building the analysis model and co-authoring research on interpretable AI for prosthetics with a biomedical engineering professor.",
     },
     {
       title: "Technology Student Association — Officer",
       description:
         "Prepared 50+ competitors for regional, state, and national contests, carrying the chapter to the TSA National Conference.",
       href: "https://slhstsa.wixsite.com/home",
+    },
+  ],
+
+  publications: [
+    {
+      title:
+        "Identifying Important and Transferable sEMG Features for Cross-User Hand Gesture Classification",
+      description:
+        "This study evaluates 21 surface electromyography (sEMG) features across 18 participants to investigate which muscle-signal characteristics support accurate hand-gesture recognition and generalize to unseen users. By comparing personalized and cross-user machine-learning performance, it examines a key barrier to developing adaptable prosthetic control systems that require less individual calibration. To be presented at BMES 2026.",
+    },
+    {
+      title:
+        "CALIBER: A Context-Aware Calibration Layer for Neural Network Adaptation",
+      description:
+        "CALIBER investigates whether a lightweight add-on can help trained neural networks adapt to new users or changing conditions using only a small amount of contextual data. Inspired by hypernetworks, the proposed system would generate targeted adjustments rather than extensively retraining the original model. The research will test whether this approach improves prediction accuracy while reducing calibration-data requirements and adaptation time. Currently in the works.",
     },
   ],
 
