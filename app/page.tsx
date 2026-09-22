@@ -10,13 +10,13 @@ function Item({ item }: { item: LinkItem }) {
       href={item.href}
       target={isExternal(item.href) ? "_blank" : undefined}
       rel={isExternal(item.href) ? "noopener noreferrer" : undefined}
-      className="group inline-flex items-center gap-1 font-medium text-ink"
+      className="group inline-flex items-center gap-1 font-medium text-ink transition-colors hover:text-accent"
     >
       <span className="u-anim">{item.title}</span>
       {isExternal(item.href) && (
         <span
           aria-hidden
-          className="translate-y-[0.5px] text-[0.7em] text-muted transition-transform group-hover:translate-x-[1px]"
+          className="translate-y-[0.5px] text-[0.7em] text-accent transition-transform group-hover:translate-x-[1px]"
         >
           ↗
         </span>
@@ -34,12 +34,19 @@ function Item({ item }: { item: LinkItem }) {
   );
 }
 
+function Heading({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className="mb-5 flex items-center gap-2 text-[0.95rem] font-semibold tracking-tight text-ink">
+      <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
+      {children}
+    </h2>
+  );
+}
+
 function Section({ title, items }: { title: string; items: LinkItem[] }) {
   return (
     <section className="mt-14">
-      <h2 className="mb-5 text-[0.95rem] font-semibold tracking-tight text-ink">
-        {title}
-      </h2>
+      <Heading>{title}</Heading>
       <ul className="space-y-5 text-[0.95rem]">
         {items.map((item) => (
           <Item key={item.title} item={item} />
@@ -62,9 +69,7 @@ export default function Home() {
 
       {/* Today */}
       <section className="mt-14">
-        <h2 className="mb-5 text-[0.95rem] font-semibold tracking-tight text-ink">
-          Today
-        </h2>
+        <Heading>Today</Heading>
         <div className="space-y-4 text-[0.95rem] leading-relaxed text-ink/90">
           {content.today.map((p, i) => (
             <p key={i}>{p}</p>
