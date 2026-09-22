@@ -30,7 +30,7 @@ export const content: SiteContent = {
 
   today: [
     "I'm a high schooler at Seven Lakes High School. When I'm not in class, I'm usually building something.",
-    "My interests sit at the intersection of drone technology, machine learning, neuroscience, and biomedical engineering — autonomous systems, AI, and the engineering that ties them together.",
+    "My interests sit at the intersection of drone technology, machine learning, neuroscience, and biomedical engineering. I'm drawn to autonomous systems, AI, and the engineering that ties them together.",
   ],
 
   projects: [
