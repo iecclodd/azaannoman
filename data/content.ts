@@ -56,7 +56,7 @@ export const content: SiteContent = {
     {
       title: "Skyes Travel — AI Booking System",
       description:
-        "An AI-powered booking system I built for a family travel business. It runs the whole reservation workflow, turning a manual, repetitive process into a fast, near hands-free pipeline that takes a trip from first inquiry to confirmed booking.",
+        "An AI-powered booking system I built for a family travel business approaching $200K in revenue. It runs the whole reservation workflow, turning a manual process into a fast, near hands-free pipeline from first inquiry to confirmed booking.",
     },
     {
       title: "Connectome-Driven Drone Autonomy",
