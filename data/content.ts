@@ -59,9 +59,14 @@ export const content: SiteContent = {
         "An AI-powered booking system I built for a family travel business. It runs the whole reservation workflow, turning a manual, repetitive process into a fast, near hands-free pipeline that takes a trip from first inquiry to confirmed booking.",
     },
     {
-      title: "Fruit-Fly Connectome Autonomy",
+      title: "Connectome-Driven Drone Autonomy",
       description:
-        "The fruit fly recently became the most complex animal to have its entire brain digitally reconstructed, with every neuron and connection mapped. I'm developing an autonomous system built on that connectome, turning a fully digitized biological brain into a working model for machine navigation and control.",
+        "The fruit fly is the most complex animal to have its entire brain digitally mapped, neuron by neuron. I'm using that connectome as a blueprint for an autonomous drone system, translating how a biological brain senses and steers into onboard navigation and control.",
+    },
+    {
+      title: "FPV & Racing Drones",
+      description:
+        "Self-taught FPV drone builder. I've built three high-performance racing drones from scratch, from component selection and soldering to assembly, advanced tuning, and flight testing.",
     },
     {
       title: "RECOIL-1: A Bioinspired Elastic-Recovery Water Pump",
@@ -73,43 +78,38 @@ export const content: SiteContent = {
       description:
         "A game that makes practicing AP Calculus AB/BC feel like leveling up instead of grinding problem sets. I'm a junior developer on the team, driving the design and visuals, with more of the build on the way.",
     },
+  ],
+
+  leadership: [
+    {
+      title: "Hearts for Elders — Head of Chapter Management",
+      description:
+        "I lead chapter management for a senior-care nonprofit with chapters across 6 continents, coordinating the volunteers and local teams that keep them running. The organization has reached 1,150+ elders with 200+ volunteers and over $10,000 raised to bring dignity, companionship, and compassion to elderly communities.",
+      href: "https://www.hearts4elders.org",
+    },
+    {
+      title: "Mecclabs — Mechanical Co-Director",
+      description:
+        "Co-director for a 501(c)(3) that teaches core engineering through hands-on, project-based camps, spanning mechanical, electrical, biomedical, and chemical disciplines. I design curriculum and have helped generate nearly $20K through the programs.",
+      href: "https://www.mecclabs.com",
+    },
+    {
+      title: "Technology Student Association — Officer",
+      description:
+        "Officer in one of the largest and most-awarded TSA chapters in Texas. I help prepare 50+ competitors for regional, state, and national contests. This season the chapter took 2nd for the State School Award out of 125 schools and produced 14 national qualifiers.",
+      href: "https://www.slhstsa.org",
+    },
     {
       title: "Mathlify STEM",
       description:
         "A student-led nonprofit making hands-on STEM affordable for under-resourced schools. It ships beginner electronics kits with breadboards, LEDs, resistors, and printed activity guides, built on the belief that hands-on STEM access shouldn't depend on budget.",
       href: "https://stem.mathlify.org",
     },
-  ],
-
-  leadership: [
     {
       title: "SLHS Student Council — Officer",
       description:
         "Lead officer behind a 600+ member organization, driving $100K+ in annual fundraising for donated meals and supplies to local shelters.",
       href: "https://linktr.ee/7lakesstuco",
-    },
-    {
-      title: "Hearts for Elders — Secretary & Chapter Lead",
-      description:
-        "Helped scale a senior-care nonprofit into a global network with chapters across the U.S., Nigeria, and Kenya.",
-      href: "https://www.hearts4elders.org",
-    },
-    {
-      title: "Mecclabs — Mechanical Co-Director",
-      description:
-        "Architecting hands-on curriculum across five engineering disciplines; helped generate nearly $20K through education programs.",
-      href: "https://www.mecclabs.com",
-    },
-    {
-      title: "University of Miami — AI Research Collaborator",
-      description:
-        "Building the analysis model and co-authoring research on interpretable AI for prosthetics with a biomedical engineering professor.",
-    },
-    {
-      title: "Technology Student Association — Officer",
-      description:
-        "Prepared 50+ competitors for regional, state, and national contests, carrying the chapter to the TSA National Conference.",
-      href: "https://slhstsa.wixsite.com/home",
     },
   ],
 
