@@ -58,6 +58,12 @@ export const content: SiteContent = {
         "The fruit fly is the most complex animal to have its entire brain digitally mapped, neuron by neuron. I'm using that connectome as a blueprint for an autonomous drone system, translating how a biological brain senses and steers into onboard navigation and control.",
     },
     {
+      title: "DroneLab",
+      description:
+        "A browser-based FPV drone simulator and AI experimentation lab with explorable worlds, practice missions, flight recordings, and behavior-cloning experiments. Built with React, Three.js, Rapier, and TensorFlow.js.",
+      href: "https://github.com/iecclodd/dronelab",
+    },
+    {
       title: "FPV & Racing Drones",
       description:
         "Self-taught FPV drone builder. I've built three high-performance racing drones from scratch, from component selection and soldering to assembly, advanced tuning, and flight testing.",
