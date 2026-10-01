@@ -125,6 +125,7 @@ export const content: SiteContent = {
         "Identifying Important and Transferable sEMG Features for Cross-User Hand Gesture Classification",
       description:
         "This study evaluates 21 surface electromyography (sEMG) features across 18 participants to investigate which muscle-signal characteristics support accurate hand-gesture recognition and generalize to unseen users. By comparing personalized and cross-user machine-learning performance, it examines a key barrier to developing adaptable prosthetic control systems that require less individual calibration. To be presented at BMES 2026.",
+      href: "https://github.com/iecclodd/Final-Models",
     },
     {
       title:
