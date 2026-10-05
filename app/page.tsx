@@ -62,10 +62,10 @@ export default function Home() {
             href="/Azaan_Noman_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="View Azaan Noman's résumé (PDF, opens in a new tab)"
+            aria-label="Link to resume (PDF, opens in a new tab)"
             className="group inline-flex items-center gap-1 text-[0.8rem] text-muted transition-colors hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
           >
-            <span className="u-anim">Résumé</span>
+            <span className="u-anim">Link to resume</span>
             <span
               aria-hidden
               className="translate-y-[0.5px] text-[0.7em] transition-transform group-hover:translate-x-[1px]"
