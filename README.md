@@ -89,3 +89,50 @@ property. Hosting on vercel.app does not make this Vercel's developer portal.
 ## Deploy
 
 Push to GitHub and connect the repo to the `azaannoman` project on Vercel (or import it fresh). Every push to `main` deploys automatically.
+
+## REST API, OpenAPI, and CLI
+
+`/openapi.json` publishes an OpenAPI 3.1.1 document with typed parameters, response
+schemas, unique operation IDs, and descriptions for every REST GET and HEAD
+operation. `/api` provides JSON discovery. Public data endpoints are:
+
+- `/api/v1/portfolio`: complete portfolio, source URL, and resume URL.
+- `/api/v1/projects?limit=20&offset=0`: projects in homepage order; limit 1–100,
+  offset 0–2147483647. An offset past the end returns an empty list.
+- `/api/v1/contact`: the public email and social links.
+
+No credentials or writes. Unsupported methods return 405 with `Allow: GET, HEAD`.
+Invalid/unknown/repeated parameters return 400, unknown API paths return 404,
+and rejected JSON media types return 406. Errors use RFC 9457
+`application/problem+json`, including stable `code` and `resolution` extensions.
+Query values are not reflected in error messages. HEAD preserves status/headers
+without a response body. No application-level rate limit is enforced; platform
+protections may still apply. Clients should reuse data and avoid needless polling.
+
+The dependency-free Node.js 20+ CLI lives in `packages/cli`. Its versioned npm
+package is available directly from the official domain:
+
+```sh
+npx --yes --package=https://azaannoman.vercel.app/cli/azaannoman-cli-1.0.0.tgz azaannoman projects --limit 3
+```
+
+It supports `portfolio`, `projects`, `contact`, `openapi`, `--help`, and `--version`.
+Data goes to stdout as JSON; errors go to stderr as JSON with exit code 1.
+Registry publication requires the owner's npm login and is not yet complete.
+See `packages/cli/README.md` for publishing steps. Regenerate the hosted archive
+after editing the package using:
+
+```sh
+npm pack ./packages/cli --pack-destination ./public/cli
+```
+
+Do not replace an already published version; bump its version and update links.
+The MIT license in `packages/cli/LICENSE` applies only to the CLI package.
+
+Tests also validate the published OpenAPI document, validate response bodies
+against its schemas, cover API errors and pagination, test CLI success/failure
+streams and argument validation, and install/run the real packaged executable.
+The homepage's WebSite/ProfilePage metadata ties its brand to the existing Person
+identity. Its visible Student Projects heading retains the existing typography.
+Search ranking still requires indexing and genuine links from relevant profiles
+or publications; metadata cannot guarantee a top-ten ranking.

@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head><link rel="describedby" href="/llms.txt" /></head>
+      <head><link rel="describedby" href="/llms.txt" /><link rel="service-desc" type="application/vnd.oai.openapi+json;version=3.1.1" href="/openapi.json" /><link rel="service-doc" href="/docs" /></head>
       <body className="font-sans">{children}</body>
     </html>
   );

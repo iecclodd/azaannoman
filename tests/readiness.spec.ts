@@ -146,7 +146,7 @@ test("metadata, Person identity, social image, and accessible resource links", a
   expect(png.subarray(1, 4).toString()).toBe("PNG");
   expect(png.readUInt32BE(16)).toBe(1200);
   expect(png.readUInt32BE(20)).toBe(630);
-  const schema = JSON.parse(await page.locator('script[type="application/ld+json"]').innerText());
+  const schema = JSON.parse(await page.locator('script[type="application/ld+json"]').first().innerText());
   expect(schema["@type"]).toBe("Person");
   expect(schema.name).toBe(content.name);
   expect(schema.sameAs).toContain("https://github.com/iecclodd");

@@ -1,0 +1,16 @@
+{
+  "name": "azaannoman-cli",
+  "version": "1.0.0",
+  "description": "Official read-only CLI for Azaan Noman's student projects and public portfolio API",
+  "type": "module",
+  "bin": { "azaannoman": "bin/azaannoman.mjs" },
+  "files": ["bin", "README.md", "LICENSE"],
+  "engines": { "node": ">=20" },
+  "license": "MIT",
+  "author": "Azaan Noman",
+  "homepage": "https://azaannoman.vercel.app/docs",
+  "repository": { "type": "git", "url": "git+https://github.com/iecclodd/azaannoman.git", "directory": "packages/cli" },
+  "bugs": { "url": "https://github.com/iecclodd/azaannoman/issues" },
+  "keywords": ["azaan-noman", "student-projects", "portfolio", "cli", "agents", "openapi"],
+  "publishConfig": { "access": "public", "registry": "https://registry.npmjs.org/" }
+}

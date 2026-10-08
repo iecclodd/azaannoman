@@ -1,6 +1,6 @@
 import { content, type LinkItem } from "@/data/content";
 import type { Metadata } from "next";
-import { personSchema, serializeJsonLd } from "@/lib/site";
+import { personSchema, websiteSchema, serializeJsonLd } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/", types: { "text/markdown": "/index.md" } },
@@ -59,6 +59,7 @@ export default function Home() {
   return (
     <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(personSchema) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(websiteSchema) }} />
     <main className="mx-auto min-h-screen max-w-prose px-6 py-24 sm:py-28">
       {/* Header */}
       <header>
@@ -97,7 +98,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Section title="Projects" items={content.projects} />
+      <Section title="Student Projects" items={content.projects} />
       <Section title="Leadership" items={content.leadership} />
       <Section title="Publications" items={content.publications} />
       <Section title="More" items={content.links} />

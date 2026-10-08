@@ -7,12 +7,12 @@ import { RESUME_PATH } from "@/lib/site";
 // These resources have their own content types and must bypass page negotiation.
 const resources = new Set([
   RESUME_PATH, "/sitemap.xml", "/robots.txt", "/llms.txt", "/llms-full.txt",
-  "/mcp", "/.well-known/mcp", "/opengraph-image", "/favicon.ico",
+  "/cli/azaannoman-cli-1.0.0.tgz", "/openapi.json", "/mcp", "/.well-known/mcp", "/opengraph-image", "/favicon.ico",
 ]);
 
 export function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;
-  if (resources.has(path) || path.startsWith("/opengraph-image/") ||
+  if (path === "/api" || path.startsWith("/api/") || resources.has(path) || path.startsWith("/opengraph-image/") ||
       !["GET", "HEAD"].includes(request.method) || request.headers.get("rsc") === "1") {
     return NextResponse.next();
   }

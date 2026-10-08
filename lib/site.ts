@@ -26,3 +26,11 @@ export const personSchema = {
 export function serializeJsonLd(value: unknown) {
   return JSON.stringify(value).replace(/</g, "\\u003c");
 }
+
+export const websiteSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", "@id": `${SITE_URL}/#website`, url: `${SITE_URL}/`, name: "Azaan Noman", alternateName: "Azaan Noman Student Projects", description: SITE_DESCRIPTION, publisher: { "@id": `${SITE_URL}/#person` }, inLanguage: "en" },
+    { "@type": "ProfilePage", "@id": `${SITE_URL}/#profile`, url: `${SITE_URL}/`, name: SITE_TITLE, mainEntity: { "@id": `${SITE_URL}/#person` }, isPartOf: { "@id": `${SITE_URL}/#website` } },
+  ],
+};
