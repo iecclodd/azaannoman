@@ -55,13 +55,15 @@ and MCP. Supporting pages live in `data/pages.ts`. Update `CONTENT_UPDATED` in
 `lib/site.ts` when page content changes; update the resume's sitemap date when
 replacing the PDF. Dates reflect content updates rather than request time.
 
-Next 16.4 overwrites custom Vary headers when serving App Router HTML. The build
-script `scripts/finalize-static-headers.mjs` adds `Accept` to the prerendered HTML
-response metadata and its route-cache copy, preserving Next's RSC Vary values.
+Next 16.4 overwrites custom Vary headers when serving App Router HTML. On Vercel,
+`vercel.json` runs `next build` and appends `Accept` through a platform response
+header transform, preserving Next's RSC Vary values. For local/self-hosted builds,
+`npm run build` also runs `scripts/finalize-static-headers.mjs` to put the same
+header into prerendered HTML metadata and any existing route-cache copy.
 This keeps pages static and avoids fetching the site from itself. Keep Next
-pinned and rerun HTTP tests when upgrading; the script fails on missing expected
-metadata. The workaround applies to production builds; development HTML headers
-are managed by Next. Negotiated Markdown responses are explicitly not cached.
+pinned and rerun HTTP tests when upgrading; the local script fails on missing
+expected page metadata. Development HTML headers are managed by Next. Negotiated
+Markdown responses are explicitly not cached.
 
 ## Verification
 

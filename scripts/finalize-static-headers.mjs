@@ -1,8 +1,9 @@
 import { readFile, writeFile } from "node:fs/promises";
 
 // Next 16.4 replaces proxy/config Vary headers when serving App Router HTML.
-// Persist Accept in each prerendered page's response metadata so Next and
-// Vercel append it after the framework's RSC headers. Keep Next pinned and
+// For local/self-hosted next start, persist Accept in each prerendered page's
+// response metadata after the framework's RSC headers. Vercel uses the response
+// header transform in vercel.json and runs next build directly. Keep Next pinned and
 // verify this contract with the HTTP tests when upgrading the framework.
 const pages = ["index", "about", "contact", "privacy", "docs", "_not-found"];
 for (const page of pages) {
