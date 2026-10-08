@@ -1,24 +1,23 @@
 import type { Metadata } from "next";
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Azaan Noman",
-  description:
-    "Builder & engineer. Co-founding Polyshield, researching interpretable AI for prosthetics, and leading across seven organizations.",
-  metadataBase: new URL("https://azaannoman.vercel.app"),
+  title: { default: SITE_TITLE, template: "%s | Azaan Noman" },
+  description: SITE_DESCRIPTION,
+  metadataBase: new URL(SITE_URL),
+  other: { "is-agentic-site-type": "content" },
   openGraph: {
-    title: "Azaan Noman",
-    description:
-      "Builder & engineer. Co-founding Polyshield, researching interpretable AI for prosthetics, and leading across seven organizations.",
-    url: "https://azaannoman.vercel.app",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
     siteName: "Azaan Noman",
     type: "website",
   },
   twitter: {
-    card: "summary",
-    title: "Azaan Noman",
-    description:
-      "Builder & engineer at the intersection of AI, security, and engineering.",
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
 };
 
@@ -29,6 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head><link rel="describedby" href="/llms.txt" /></head>
       <body className="font-sans">{children}</body>
     </html>
   );

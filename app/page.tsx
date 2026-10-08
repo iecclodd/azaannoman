@@ -1,4 +1,10 @@
 import { content, type LinkItem } from "@/data/content";
+import type { Metadata } from "next";
+import { personSchema, serializeJsonLd } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/", types: { "text/markdown": "/index.md" } },
+};
 
 function isExternal(href?: string) {
   return !!href && href.startsWith("http");
@@ -51,6 +57,8 @@ function Section({ title, items }: { title: string; items: LinkItem[] }) {
 
 export default function Home() {
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(personSchema) }} />
     <main className="mx-auto min-h-screen max-w-prose px-6 py-24 sm:py-28">
       {/* Header */}
       <header>
@@ -97,7 +105,14 @@ export default function Home() {
       {/* Footer */}
       <footer className="mt-20 border-t border-line pt-6 text-[0.8rem] text-muted">
         <p>Built by Azaan Noman.</p>
+        <nav aria-label="Site information" className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+          <a className="hover:text-ink" href="/about">About</a>
+          <a className="hover:text-ink" href="/contact">Contact</a>
+          <a className="hover:text-ink" href="/privacy">Privacy</a>
+          <a className="hover:text-ink" href="/docs">Developer & agent resources</a>
+        </nav>
       </footer>
     </main>
+    </>
   );
 }
