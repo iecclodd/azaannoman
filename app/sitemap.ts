@@ -7,6 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...["/", ...Object.keys(infoPages).map((slug) => `/${slug}`)].map((path) => ({
       url: new URL(path, SITE_URL).href, lastModified: CONTENT_UPDATED,
     })),
-    { url: `${SITE_URL}${RESUME_PATH}`, lastModified: "2026-10-04" },
+    { url: `${SITE_URL}${RESUME_PATH}`, lastModified: "2026-10-13" },
   ];
 }

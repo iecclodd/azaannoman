@@ -15,8 +15,8 @@ export const infoPages: Record<string, InfoPage> = {
       { heading: "A student who builds", paragraphs: content.today },
       { heading: "Projects and research", paragraphs: [
         "This portfolio brings together my student projects, engineering experiments, research, and leadership roles. My work includes software for AI teams, autonomous drone systems, hands-on drone construction, and research into muscle signals and adaptable neural networks. The homepage describes each project and links to the public project site or repository when one is available.",
-        "Some entries describe active research or work in progress. Their descriptions state the current scope; being listed here does not imply a finished product, a published result, or that every project has a public API. My resume provides another way to review my experience, and the contact page links to my public profiles.",
-      ], links: [{ title: "Explore my projects", href: "/" }, { title: "Read my resume (PDF)", href: RESUME_PATH }] },
+        "Some entries describe active research or work in progress. Their descriptions state the current scope; being listed here does not imply a finished product, a published result, or that every project has a public API. My CV provides another way to review my experience, and the contact page links to my public profiles.",
+      ], links: [{ title: "Explore my projects", href: "/" }, { title: "Read my CV (PDF)", href: RESUME_PATH }] },
     ],
   },
   contact: {
@@ -37,7 +37,7 @@ export const infoPages: Record<string, InfoPage> = {
     description: "How this personal portfolio handles page requests, email links, and links to other websites.",
     sections: [
       { heading: "Using this portfolio", paragraphs: [
-        "This is a public personal portfolio. You can read its pages, download the resume, or use its public machine-readable content without creating an account. The site does not include a contact form, checkout, or a site-operated analytics script. Its read-only agent tools return the same public portfolio information and do not send emails, book appointments, or modify records.",
+        "This is a public personal portfolio. You can read its pages, download the CV, or use its public machine-readable content without creating an account. The site does not include a contact form, checkout, or a site-operated analytics script. Its read-only agent tools return the same public portfolio information and do not send emails, book appointments, or modify records.",
         "The site is hosted on Vercel. When you request a page or call an agent endpoint, the hosting infrastructure receives technical request information such as your IP address, requested URL, and browser or client headers. Vercel may process that information for delivering the site, security, and operational logging under its own policies. This page does not specify a retention period for the hosting provider.",
       ], links: [{ title: "Vercel privacy policy", href: "https://vercel.com/legal/privacy-policy" }] },
       { heading: "Email and external websites", paragraphs: [
@@ -51,12 +51,12 @@ export const infoPages: Record<string, InfoPage> = {
     description: "Read Azaan Noman's student projects through the public JSON API, OpenAPI specification, CLI, Markdown, or read-only MCP tools.",
     sections: [
       { heading: "When to use this site", paragraphs: [
-        "Use this site to answer questions about Azaan Noman's student projects, engineering interests, public research descriptions, leadership roles, resume, and contact links. The homepage is the primary source. Preserve qualifications such as work in progress and attribute claims to the portfolio. Follow each project's own website or repository for its technical documentation and current capabilities.",
+        "Use this site to answer questions about Azaan Noman's student projects, engineering interests, public research descriptions, leadership roles, CV, and contact links. The homepage is the primary source. Preserve qualifications such as work in progress and attribute claims to the portfolio. Follow each project's own website or repository for its technical documentation and current capabilities.",
         "This is Azaan Noman's personal portfolio, hosted on Vercel. It is not Vercel's developer portal, and it does not provide product administration, booking, or messaging APIs. No authentication or API key is needed to retrieve the public content here.",
       ], links: [{ title: "Agent guide (llms.txt)", href: "/llms.txt" }, { title: "Full portfolio in Markdown", href: "/index.md" }] },
       { heading: "HTTP and Markdown", paragraphs: [
         `Send GET ${SITE_URL}/ with Accept: text/markdown to receive Markdown from the homepage URL. Accept: text/html returns the normal page. Responses vary by Accept and honor quality values; a request that accepts neither supported representation receives HTTP 406. HEAD returns the same headers without a response body.`,
-        "About, contact, privacy, and this documentation page also support Markdown negotiation. Explicit Markdown URLs are /index.md, /about.md, /contact.md, /privacy.md, and /docs.md. Missing pages return HTTP 404; clients accepting Markdown receive an explanation and recovery links. /llms-full.txt is another URL for the full homepage content. /sitemap.xml lists indexable pages and the resume.",
+        "About, contact, privacy, and this documentation page also support Markdown negotiation. Explicit Markdown URLs are /index.md, /about.md, /contact.md, /privacy.md, and /docs.md. Missing pages return HTTP 404; clients accepting Markdown receive an explanation and recovery links. /llms-full.txt is another URL for the full homepage content. /sitemap.xml lists indexable pages and the CV.",
       ], links: [{ title: "Sitemap", href: "/sitemap.xml" }, { title: "Robots policy", href: "/robots.txt" }] },
       { heading: "Public JSON API and OpenAPI", paragraphs: [
         `GET ${SITE_URL}/api discovers the API. GET /api/v1/portfolio returns the complete portfolio, GET /api/v1/projects returns student projects, and GET /api/v1/contact returns public contact links. Requests need no credentials and should send Accept: application/json. All operations are read-only; HEAD returns headers without a body. POST, PUT, PATCH, DELETE, and OPTIONS return HTTP 405 with Allow: GET, HEAD.`,

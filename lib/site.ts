@@ -5,8 +5,8 @@ export const SITE_TITLE = "Azaan Noman — Student Projects, AI & Engineering";
 export const SITE_DESCRIPTION =
   "Azaan Noman is a student builder and engineer at Seven Lakes High School. Explore projects in AI, drone autonomy, neuroscience, and biomedical engineering.";
 // Change this when the published page content changes, not on every request.
-export const CONTENT_UPDATED = "2026-10-07";
-export const RESUME_PATH = "/Azaan_Noman_Resume.pdf";
+export const CONTENT_UPDATED = "2026-10-13";
+export const RESUME_PATH = "/Azaan_Noman_General_CV.pdf";
 export const email = content.links.find((link) => link.title === "Email")!;
 
 export const personSchema = {

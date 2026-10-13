@@ -43,7 +43,7 @@ test("published OpenAPI validates and every documented operation matches its sch
 
 test("API data, pagination, and all error cases work through deployed routing", async ({ request }) => {
   const portfolio = await (await request.get("/api/v1/portfolio")).json();
-  expect(portfolio).toEqual({ source: `${SITE_URL}/`, resume: `${SITE_URL}/Azaan_Noman_Resume.pdf`, ...content });
+  expect(portfolio).toEqual({ source: `${SITE_URL}/`, resume: `${SITE_URL}/Azaan_Noman_General_CV.pdf`, ...content });
   const page = await (await request.get("/api/v1/projects?limit=2&offset=2")).json();
   expect(page.projects).toEqual(content.projects.slice(2, 4));
   expect(page.total).toBe(content.projects.length);

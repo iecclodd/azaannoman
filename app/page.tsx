@@ -68,13 +68,13 @@ export default function Home() {
             {content.name}
           </h1>
           <a
-            href="/Azaan_Noman_Resume.pdf"
+            href="/Azaan_Noman_General_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Link to resume (PDF, opens in a new tab)"
+            aria-label="CV (PDF, opens in a new tab)"
             className="group inline-flex items-center gap-1 text-[0.8rem] text-muted transition-colors hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
           >
-            <span className="u-anim">Link to resume</span>
+            <span className="u-anim">CV</span>
             <span
               aria-hidden
               className="translate-y-[0.5px] text-[0.7em] transition-transform group-hover:translate-x-[1px]"

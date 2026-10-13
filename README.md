@@ -40,7 +40,7 @@ available (`/index.md` for the homepage).
 
 - `/llms.txt`: agent use cases and links, in the llms.txt outline format.
 - `/llms-full.txt`: the full portfolio in Markdown.
-- `/sitemap.xml` and `/robots.txt`: crawl discovery, including the public resume.
+- `/sitemap.xml` and `/robots.txt`: crawl discovery, including the public CV.
 - `/mcp` and `/.well-known/mcp`: equivalent, live Streamable HTTP MCP endpoints.
   Use a standard MCP client to initialize, then call `get_portfolio` or
   `get_contact`. No credentials are required; both tools only read published data.
@@ -52,7 +52,7 @@ available (`/index.md` for the homepage).
 
 `data/content.ts` remains the source for portfolio facts across HTML, Markdown,
 and MCP. Supporting pages live in `data/pages.ts`. Update `CONTENT_UPDATED` in
-`lib/site.ts` when page content changes; update the resume's sitemap date when
+`lib/site.ts` when page content changes; update the CV's sitemap date when
 replacing the PDF. Dates reflect content updates rather than request time.
 
 Next 16.4 overwrites custom Vary headers when serving App Router HTML. On Vercel,
@@ -79,7 +79,7 @@ BASE_URL=https://azaannoman.vercel.app npm run test:e2e
 
 Tests check response bodies and status codes, both Accept variants, HEAD, q=0,
 406, nested 404s, explicit Markdown links, llms.txt format, XML sitemap contents,
-metadata, social image dimensions, mobile overflow, resume preservation, and real
+metadata, social image dimensions, mobile overflow, CV preservation, and real
 SDK MCP initialization/tool calls on both endpoints.
 
 Search ranking and indexing need time and independent search-engine verification.
@@ -96,7 +96,7 @@ Push to GitHub and connect the repo to the `azaannoman` project on Vercel (or im
 schemas, unique operation IDs, and descriptions for every REST GET and HEAD
 operation. `/api` provides JSON discovery. Public data endpoints are:
 
-- `/api/v1/portfolio`: complete portfolio, source URL, and resume URL.
+- `/api/v1/portfolio`: complete portfolio, source URL, and CV URL.
 - `/api/v1/projects?limit=20&offset=0`: projects in homepage order; limit 1–100,
   offset 0–2147483647. An offset past the end returns an empty list.
 - `/api/v1/contact`: the public email and social links.

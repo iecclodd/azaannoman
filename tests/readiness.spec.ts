@@ -81,7 +81,7 @@ test("all homepage content is preserved in the Markdown representation", async (
       if (item.href) expect(plain).toContain(item.href);
     }
   }
-  expect(plain).toContain("/Azaan_Noman_Resume.pdf");
+  expect(plain).toContain("/Azaan_Noman_General_CV.pdf");
 });
 
 test("llms file follows the outline format and its internal links resolve", async ({ request }) => {
@@ -115,17 +115,17 @@ test("valid sitemap lists every indexable page and PDF with honest dates", async
   const parsed = new XMLParser({ ignoreAttributes: false }).parse(xml);
   expect(parsed.urlset["@_xmlns"]).toBe("http://www.sitemaps.org/schemas/sitemap/0.9");
   const urls = parsed.urlset.url;
-  expect(urls.map((url: { loc: string }) => new URL(url.loc).pathname).sort()).toEqual([...pages, "/Azaan_Noman_Resume.pdf"].sort());
+  expect(urls.map((url: { loc: string }) => new URL(url.loc).pathname).sort()).toEqual([...pages, "/Azaan_Noman_General_CV.pdf"].sort());
   for (const entry of urls) {
     expect(entry.loc).toMatch(/^https:\/\/azaannoman\.vercel\.app\//);
-    expect(entry.lastmod).toMatch(/^2026-10-0[47]$/);
+    expect(entry.lastmod).toBe("2026-10-13");
     expect((await request.get(new URL(entry.loc).pathname)).status()).toBe(200);
   }
   const robots = await request.get("/robots.txt");
   expect(robots.status()).toBe(200);
   expect(await robots.text()).toContain(`Sitemap: ${SITE_URL}/sitemap.xml`);
   expect(await robots.text()).toContain("Allow: /");
-  const pdf = await request.get("/Azaan_Noman_Resume.pdf", { headers: { Accept: "application/pdf" } });
+  const pdf = await request.get("/Azaan_Noman_General_CV.pdf", { headers: { Accept: "application/pdf" } });
   expect(pdf.status()).toBe(200);
   expect((await pdf.body()).subarray(0, 5).toString()).toBe("%PDF-");
 });
@@ -155,7 +155,7 @@ test("metadata, Person identity, social image, and accessible resource links", a
   for (const path of pages.slice(1)) {
     await expect(page.locator(`footer a[href="${path}"]`)).toBeVisible();
   }
-  await expect(page.getByRole("link", { name: "Link to resume (PDF, opens in a new tab)" })).toHaveAttribute("href", "/Azaan_Noman_Resume.pdf");
+  await expect(page.getByRole("link", { name: "CV (PDF, opens in a new tab)" })).toHaveAttribute("href", "/Azaan_Noman_General_CV.pdf");
   for (const path of pages.slice(1)) {
     await page.goto(path);
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", `${SITE_URL}${path}`);
@@ -178,7 +178,7 @@ for (const path of ["/mcp", "/.well-known/mcp"]) {
       for (const tool of tools.tools) expect(tool.annotations?.readOnlyHint).toBe(true);
       const result = await client.callTool({ name: "get_portfolio", arguments: { section: "projects" } });
       expect(result.isError).not.toBe(true);
-      expect(result.structuredContent).toEqual({ source: `${SITE_URL}/`, resume: `${SITE_URL}/Azaan_Noman_Resume.pdf`, projects: content.projects });
+      expect(result.structuredContent).toEqual({ source: `${SITE_URL}/`, resume: `${SITE_URL}/Azaan_Noman_General_CV.pdf`, projects: content.projects });
       const all = await client.callTool({ name: "get_portfolio", arguments: {} });
       expect(all.structuredContent).toMatchObject({ name: content.name, publications: content.publications });
       const contact = await client.callTool({ name: "get_contact", arguments: {} });

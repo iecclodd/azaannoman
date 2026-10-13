@@ -35,7 +35,7 @@ test("OpenAPI validates and describes every REST operation and response", async 
 
 test("portfolio and contact return all original data and source URLs", async () => {
   const portfolio = await (await handleApi(request("/api/v1/portfolio"))).json();
-  assert.deepEqual(portfolio, { source: `${SITE_URL}/`, resume: `${SITE_URL}/Azaan_Noman_Resume.pdf`, ...content });
+  assert.deepEqual(portfolio, { source: `${SITE_URL}/`, resume: `${SITE_URL}/Azaan_Noman_General_CV.pdf`, ...content });
   const contact = await (await handleApi(request("/api/v1/contact"))).json();
   assert.deepEqual(contact.links, content.links);
 });
